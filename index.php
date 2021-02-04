@@ -143,8 +143,11 @@ if ($_POST['StartScale'] == 'StartC' && $_POST['ConvScale'] == 'ConvK') {
                 <a href="">Reset</a>
         
             </form>
-    
-
+            
+            <div class="results">
+                <p>The initial temperature was <br> <?=number_format($userTemp, 2)?> <?=$userScale?>.</p>
+                <p>The new temperature is <br> <?=number_format($newTemp, 2)?> <?=$endScale?>.</p>
+            </div>
 
         </div> <!-- end container -->
     
