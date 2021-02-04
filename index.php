@@ -149,6 +149,18 @@ if($_POST['StartScale'] == $_POST['ConvScale']){
                 <a href="">Reset</a>
         
             </form>
+
+            <div class="errors">
+                <?php 
+                    if ($errorMsg != "") {
+                        echo"<p>Error, Will Robinson! Error!</p>";
+                        echo $errorMsg;
+                        echo "<p>Please, try again.</p>";
+                    }
+
+                ?>
+                
+            </div>
             
             <div class="results">
                 <p>The initial temperature was <br> <?=number_format($userTemp, 2)?> <?=$userScale?>.</p>
