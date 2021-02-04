@@ -88,6 +88,12 @@ if ($_POST['StartScale'] == 'StartC' && $_POST['ConvScale'] == 'ConvK') {
     $newTemp = ($userTemp + 273.15);  
 } 
 
+// Checks to see if starting and conversion scale are the same. 
+// *****  Not working on it's own... only displays with other errors  *****
+if($_POST['StartScale'] == $_POST['ConvScale']){
+    $errorMsg .= "<p>The starting and conversion scales cannot be the same. </p>";
+}
+
 ?>
 
 
