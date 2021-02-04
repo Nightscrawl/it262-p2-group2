@@ -31,7 +31,16 @@ $newTemp = (float)"";
 
 // Used .= to append each error to the variable, so one can see a "list" errors that apply.
 
-
+// First checks if userTemp is an empty string. If so, appends msg to errorMsg.
+if(empty($_POST['userTemp'])){
+    $errorMsg .= "<p>Please enter a starting temperature.</p>";
+}else{
+    if (is_numeric($_POST['userTemp']) == FALSE) {
+        $errorMsg .= "<p>Alphabetical characters are not allowed. <br>Please enter a number.</p>";
+    }else {
+        $userTemp = $_POST['userTemp'];
+    }
+}
 
 
 
