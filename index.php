@@ -42,7 +42,12 @@ if(empty($_POST['userTemp'])){
     }
 }
 
-
+// Checks if Starscel has been set. If not, appends msg to errorMsg.
+if(isset($_POST['StartScale'])){
+    $StartScale = $_POST['StartScale'];
+}else{
+    $errorMsg .= "<p>Please select a starting scale.</p>";
+}
 
 // ************* CONVERSIONS *************
 
