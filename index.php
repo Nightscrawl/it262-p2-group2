@@ -49,6 +49,13 @@ if(isset($_POST['StartScale'])){
     $errorMsg .= "<p>Please select a starting scale.</p>";
 }
 
+// Checks if ConvScale has been set. If not, appends msg to errorMsg.
+if(isset($_POST['ConvScale'])){
+    $ConvScale = $_POST['ConvScale']; 
+}else{
+    $errorMsg .= "<p>Please choose the conversion scale.</p>";
+}
+
 // ************* CONVERSIONS *************
 
 
