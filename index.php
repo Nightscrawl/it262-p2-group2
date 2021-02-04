@@ -53,7 +53,19 @@ if(isset($_POST['StartScale'])){
 
 
 
+// Kelvin to Fahrenheit
+if ($_POST['StartScale'] == 'StartK' && $_POST['ConvScale'] == 'ConvF') {
+    $userScale = "Kelvin";
+    $endScale = "Fahrenheit";
+    $newTemp = (($userTemp - 273.15)* (9/5) + 32);
+} 
 
+// Kelvin to Celsius
+if ($_POST['StartScale'] == 'StartK' && $_POST['ConvScale'] == 'ConvC') {
+    $userScale = "Kelvin";
+    $endScale = "Celsius";
+    $newTemp = ($userTemp - 273.15);
+}
 
 ?>
 
